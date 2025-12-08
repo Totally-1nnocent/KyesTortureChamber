@@ -18,14 +18,16 @@ def leaderboarding():
     with open(FILENAME, "r+", newline="") as file:
         reader = csv.reader(file)
         for line in reader:
-            leaderboard.update(int(line[1]) : str(line[0]))
+            leaderboard[int(line[1])] = line[0]
+        sorted_leaderboard = dict(sorted(leaderboard.items))
 
 
 def main():
     while True:
         print("\n1. Add score")
         print("2. Show all scores")
-        print("3. Quit")
+        print("3. Show leaderboard")
+        print("4. Quit")
         choice = input("Choose an option: ")
 
         if choice == "1":
@@ -48,6 +50,8 @@ def main():
         elif choice == "2":
             show_scores()
         elif choice == "3":
+            leaderboarding()
+        elif choice == "4":
             print("Goodbye!")
             break
         else:
