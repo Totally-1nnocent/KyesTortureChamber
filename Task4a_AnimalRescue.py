@@ -135,3 +135,7 @@ if main_menu_choice == "1":
     print(get_avg_data(avg_choice))
 elif main_menu_choice == "2":
     trend_identification()
+
+#Poll are the type of posts that get the most interaction.
+#The highest point of likes is towards the middle of the campaign, 8 days in and it is followed quickly by the lowest point.
+#The most interactions occur between 2pm and 4pm.
